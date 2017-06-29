@@ -8,15 +8,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
-        this.name = 'Angular';
+        this.hero = {
+            id: 1,
+            name: 'Windstorm'
+        };
+        this.title = 'Tour of Heroes';
     }
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "<h1>Hello {{name}}</h1>",
+        template: "\n    <div id=\"main-content\" class=\"container\">\n      <code class=\"header-code\">[[ --  path:: sites/sandbox/dev_mean/angular-tour-of-heroes/src/app/app.component.ts -- ]]</code>\n    \n      <h1>{{title}}</h1>\n      <h2>{{hero.name}} details:</h2>\n      <div><label>id: </label>{{hero.id}}</div>\n      <div><label>name: </label>{{hero.name}}</div>\n    </div>\n    <div>\n      <label>name: </label>\n      <input [(ngModel)]=\"hero.name\" placeholder=\"name\">\n    </div>\n  ",
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
+var Hero = (function () {
+    function Hero() {
+    }
+    return Hero;
+}());
+exports.Hero = Hero;
 //# sourceMappingURL=app.component.js.map
